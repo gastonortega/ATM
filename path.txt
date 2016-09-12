@@ -1,0 +1,2 @@
+login.dat
+log.txt

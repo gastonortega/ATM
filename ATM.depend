@@ -1,0 +1,39 @@
+# depslib dependency file v1.0
+1473718623 source:c:\users\rferrari\desktop\proyecto atm\atm\abmusuario.c
+	"ABMUsuario.h"
+
+1473708585 c:\users\rferrari\desktop\proyecto atm\atm\abmusuario.h
+	<stdio.h>
+	<string.h>
+	<conio.h>
+	<stdlib.h>
+	<errno.h>
+	<time.h>
+
+1473717272 source:c:\users\rferrari\desktop\proyecto atm\atm\main.c
+	<stdio.h>
+	<string.h>
+	<conio.h>
+	<stdlib.h>
+	<errno.h>
+	<time.h>
+
+1473704678 source:c:\users\gortega.iplan\desktop\atm\main.c
+	<stdio.h>
+	<string.h>
+	<conio.h>
+	<stdlib.h>
+	<errno.h>
+	<time.h>
+
+1473719511 source:c:\users\gortega.iplan\desktop\atm\abmusuario.c
+	"ABMUsuario.h"
+
+1473704678 c:\users\gortega.iplan\desktop\atm\abmusuario.h
+	<stdio.h>
+	<string.h>
+	<conio.h>
+	<stdlib.h>
+	<errno.h>
+	<time.h>
+
