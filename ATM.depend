@@ -37,3 +37,20 @@
 	<errno.h>
 	<time.h>
 
+1473725685 source:c:\users\rferrari\documents\atm\abmusuario.c
+	"ABMUsuario.h"
+
+1473725550 c:\users\rferrari\documents\atm\abmusuario.h
+	<stdio.h>
+	<string.h>
+	<conio.h>
+	<stdlib.h>
+	<time.h>
+
+1473725552 source:c:\users\rferrari\documents\atm\main.c
+	<stdio.h>
+	<string.h>
+	<conio.h>
+	<stdlib.h>
+	<time.h>
+

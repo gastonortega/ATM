@@ -1,2 +1,4 @@
 login.dat
 log.txt
+historico.dat
+tmpusers.dat
