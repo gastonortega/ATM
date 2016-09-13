@@ -10,6 +10,7 @@ int AltaUsuarioCliente(char **a, int b){
     RegUser Temp;
     char *User;
     char *Password;
+    int Cuenta;
     User = (char*)calloc(sizeof(char),10);
     Password = (char*)calloc(sizeof(char),10);
     if(User==NULL || Password==NULL)
@@ -46,9 +47,12 @@ int AltaUsuarioCliente(char **a, int b){
             return(7);
         }
         else{
+             printf("\n Ingrese Numero de cuenta:");
+             scanf('%d',Cuenta);
             strcpy(Temp.nombreUsuario,User);
             strcpy(Temp.passwordUsuario,Password);
             Temp.jerarquia = 2;
+            Temp.Cuenta = Cuenta;
             fseek(archivo, 0, SEEK_END);
             fseek(archivo, 0, SEEK_CUR);
             fwrite(&Temp,sizeof(RegUser),1,Arch);

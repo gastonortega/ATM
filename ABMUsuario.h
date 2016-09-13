@@ -26,4 +26,5 @@ typedef struct {
     char nombreUsuario[10];
     char passwordUsuario[10];
     int jerarquia;
+    int cuenta;
 } RegUser;
