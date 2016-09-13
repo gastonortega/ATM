@@ -164,3 +164,32 @@ void bajaUsuarioPlataforma(char **a, int b , int c, int d) {
     remove(*(a+b));
     rename(*(a+d), *(a+b));
 }
+
+void modificarJerarquia(char **a, int b) {
+    RegUser temporal;
+    FILE *archivo;
+    int nuevaJerarquia;
+    char *usuario;
+    usuario = (char*)calloc(sizeof(char),10);
+    fflush(stdin);
+    printf("\nIngrese el usuario al que le quiere modificar la jerarquia:");
+    gets(usuario);
+    printf("\nIngrese la nueva jerarquia: ");
+    scanf("%d", &nuevaJerarquia);
+    archivo = fopen(*(a+b), "rb+");
+    fseek(archivo, 0, SEEK_SET);
+    fread(&temporal, sizeof(RegUser), 1, archivo);
+    while(!feof(archivo)&&(strcmp(temporal.nombreUsuario, usuario)!=0)) {
+        fread(&temporal, sizeof(RegUser), 1, archivo);
+    }
+    printf("user encontrado: %s", temporal.nombreUsuario);
+    printf("user metido: %s", usuario);
+    if (strcmp(temporal.nombreUsuario, usuario)==0) {
+        temporal.jerarquia = nuevaJerarquia;
+        fseek(archivo, -1*sizeof(RegUser), SEEK_CUR);
+        fseek(archivo, 0, SEEK_CUR);
+        fwrite(&temporal, sizeof(RegUser), 1, archivo);
+        fclose(archivo);
+        printf("\nLa jerarquia se modifico correctamente.");
+    } else printf("\nEl usuario no existe en la base de datos.");
+}

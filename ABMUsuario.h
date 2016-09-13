@@ -13,6 +13,7 @@ void logueoPlataforma(char**, int);
 void altaUsuarioPlataforma(char**, int);
 void listarUsuarios(char **, int);
 void bajaUsuarioPlataforma(char**, int, int, int);
+void modificarJerarquia(char**, int);
 
 typedef struct {
     char nombreUsuario[10];

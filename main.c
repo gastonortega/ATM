@@ -40,6 +40,8 @@ void main() {
         case 2:
         bajaUsuarioPlataforma(paths, PATH_LOGIN, PATH_HISTORICO, PATH_TEMPORAL);
         break;
+        case 3:
+        modificarJerarquia(paths, PATH_LOGIN);
     }
 }
 
