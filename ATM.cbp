@@ -31,10 +31,18 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="ABMCajero.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="ABMCajero.h" />
 		<Unit filename="ABMUsuario.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="ABMUsuario.h" />
+		<Unit filename="Logger.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Logger.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
