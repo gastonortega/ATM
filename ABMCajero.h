@@ -1,8 +1,5 @@
-#include <stdio.h>
-#include <string.h>
-#include <conio.h>
-#include <stdlib.h>
 #include "ABMUsuario.h"
+#include "Logger.h"
 #define PATH_TRANSFERENCIAS 4
 #define PATH_CAJADEAHORRO   5
 typedef struct{
@@ -22,6 +19,6 @@ int Alias;
 int Activo;
 }Transferencias;
 
-int AltaUsuarioCliente(** char, int);
-int Consulta_Archivo_CajaAhorro(void);
-int Consulta_Archivo_Transferenci(void);
+int AltaUsuarioCliente(char **, int);
+int Consulta_Archivo_CajaAhorro(char **, int);
+int Consulta_Archivo_Transferenci(char **, int);

@@ -1,10 +1,20 @@
 #include "ABMCajero.h"
+int cantidadPath = 0;
+char **paths;
+int opcion;
+FILE *archRegistro;
+//RegUser userLogueado;
+cantidadPath = contarPaths();
+printf("Se encontraron %d paths.\n", (cantidadPath+1));
+paths = (char**)malloc(cantidadPath*sizeof(char*));
+
 /*retornos AltaUsuarioCliente
    return 9 = MEMORIA INSUFICIENTE
    return 8 = ARCHIVO INACCESIBLE
    return 7 = USUARIO EXISTENTE PREGUNTAR POR CAMBIO DE CATEGORIA.
    return 0 = USUARIO AGREGADO EXITOSAMENTE
 */
+
 int AltaUsuarioCliente(char **a, int b){
     FILE *Arch;
     RegUser Temp;
@@ -17,6 +27,7 @@ int AltaUsuarioCliente(char **a, int b){
     {
         printf("\n No hay memoria disponible.");
         getch();
+        Logger(paths,PATH_LOG,"CAJ","MEMORIA INSUFICIENTE");
         return(9);
     }
     fflush(stdin);
@@ -31,10 +42,12 @@ int AltaUsuarioCliente(char **a, int b){
     {
         printf("\n No se puede leer archivo Usuarios.");
         getch();
+        Logger(paths,PATH_LOG,"CAJ","ERROR ACCESO ARCHIVO USUARIOS");
         return(8);
     }
     else
     {
+      Logger(paths,PATH_LOG,"CAJ","ACCESO ARCHIVO USUARIOS OK");
       fread(&Temp.nombreUsuario,sizeof(RegUser),1,Arch);
       while(!feof(Arch) && (strcmp(Temp.nombreUsuario,User)!=0))
       {
@@ -44,6 +57,7 @@ int AltaUsuarioCliente(char **a, int b){
         {
             printf("\nUsuario Existente.");
             getch();
+            Logger(paths,PATH_LOG,"CAJ","USUARIO EXISTENTE");
             return(7);
         }
         else{
@@ -56,6 +70,7 @@ int AltaUsuarioCliente(char **a, int b){
             fseek(archivo, 0, SEEK_END);
             fseek(archivo, 0, SEEK_CUR);
             fwrite(&Temp,sizeof(RegUser),1,Arch);
+            Logger(paths,PATH_LOG,"CAJ","USUARIO CREADO: "+User);
 
         }
     }
