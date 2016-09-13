@@ -83,7 +83,7 @@ void altaUsuarioPlataforma(char **a, int b) {
     printf("\nIngrese el nombre de usuario a crear [max 9 car.]: ");
     gets(nombre);
     fflush(stdin);
-    printf("\nIngrese el password de este usuario [max 9 car.]: ");
+    printf("\nIngrese el password de este usuario [max 9 ca r.]: ");
     gets(password);
     printf("\nIngrese la jerarquia del usuario: ");
     scanf("%d", &nuevoUser.jerarquia);
