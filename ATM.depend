@@ -54,3 +54,20 @@
 	<stdlib.h>
 	<time.h>
 
+1473732730 source:c:\users\gortega.iplan\documents\atm\abmusuario.c
+	"ABMUsuario.h"
+
+1473734853 c:\users\gortega.iplan\documents\atm\abmusuario.h
+	<stdio.h>
+	<string.h>
+	<conio.h>
+	<stdlib.h>
+	<time.h>
+
+1473732730 source:c:\users\gortega.iplan\documents\atm\main.c
+	<stdio.h>
+	<string.h>
+	<conio.h>
+	<stdlib.h>
+	<time.h>
+
