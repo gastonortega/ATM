@@ -17,29 +17,20 @@ paths = (char**)malloc(cantidadPath*sizeof(char*));
    return 7 = USUARIO EXISTENTE PREGUNTAR POR CAMBIO DE CATEGORIA.
    return 0 = USUARIO AGREGADO EXITOSAMENTE
 */
-<<<<<<< HEAD
-=======
 
->>>>>>> refs/remotes/origin/Testing
 int AltaUsuarioCliente(char **a, int b){
     FILE *Arch;
     RegUser Temp;
     char *User;
     char *Password;
-<<<<<<< HEAD
-=======
     int Cuenta;
->>>>>>> refs/remotes/origin/Testing
     User = (char*)calloc(sizeof(char),10);
     Password = (char*)calloc(sizeof(char),10);
     if(User==NULL || Password==NULL)
     {
         printf("\n No hay memoria disponible.");
         getch();
-<<<<<<< HEAD
-=======
         Logger(paths,PATH_LOG,"CAJ","MEMORIA INSUFICIENTE");
->>>>>>> refs/remotes/origin/Testing
         return(9);
     }
     fflush(stdin);
@@ -54,18 +45,13 @@ int AltaUsuarioCliente(char **a, int b){
     {
         printf("\n No se puede leer archivo Usuarios.");
         getch();
-<<<<<<< HEAD
-=======
         Logger(paths,PATH_LOG,"CAJ","ERROR ACCESO ARCHIVO USUARIOS");
->>>>>>> refs/remotes/origin/Testing
         return(8);
     }
     else
     {
-<<<<<<< HEAD
-=======
+
       Logger(paths,PATH_LOG,"CAJ","ACCESO ARCHIVO USUARIOS OK");
->>>>>>> refs/remotes/origin/Testing
       fread(&Temp.nombreUsuario,sizeof(RegUser),1,Arch);
       while(!feof(Arch) && (strcmp(Temp.nombreUsuario,User)!=0))
       {
@@ -75,7 +61,6 @@ int AltaUsuarioCliente(char **a, int b){
         {
             printf("\nUsuario Existente.");
             getch();
-<<<<<<< HEAD
             return(7);
         }
         else{
@@ -85,7 +70,6 @@ int AltaUsuarioCliente(char **a, int b){
             fseek(archivo, 0, SEEK_END);
             fseek(archivo, 0, SEEK_CUR);
             fwrite(&Temp,sizeof(RegUser),1,Arch);
-=======
             Logger(paths,PATH_LOG,"CAJ","USUARIO EXISTENTE");
             return(7);
         }
@@ -100,7 +84,6 @@ int AltaUsuarioCliente(char **a, int b){
             fseek(archivo, 0, SEEK_CUR);
             fwrite(&Temp,sizeof(RegUser),1,Arch);
             Logger(paths,PATH_LOG,"CAJ","USUARIO CREADO: "+User);
->>>>>>> refs/remotes/origin/Testing
 
         }
     }
