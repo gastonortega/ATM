@@ -1,6 +1,4 @@
 #include "ABMCajero.h"
-<<<<<<< HEAD
-=======
 int cantidadPath = 0;
 char **paths;
 int opcion;
@@ -10,7 +8,6 @@ cantidadPath = contarPaths();
 printf("Se encontraron %d paths.\n", (cantidadPath+1));
 paths = (char**)malloc(cantidadPath*sizeof(char*));
 
->>>>>>> refs/remotes/origin/Testing
 /*retornos AltaUsuarioCliente
    return 9 = MEMORIA INSUFICIENTE
    return 8 = ARCHIVO INACCESIBLE
@@ -85,10 +82,41 @@ int AltaUsuarioCliente(char **a, int b){
             fwrite(&Temp,sizeof(RegUser),1,Arch);
             Logger(paths,PATH_LOG,"CAJ","USUARIO CREADO: "+User);
 
+
+
         }
     }
  fclose(Arch);
  free(User);
  free(Password);
  return(0);
+}
+/*
+RETORNOS INGRESO ARCH CAJA DE AHORRRO
+RETURN 9 = ARCHIVO CAJA DE AHORRO  INACCESIBLE
+
+*/
+int Deposito_Archivo_CajaAhorro(char ** a, int b, int cue)
+{
+    FILE *ArchCaja;
+    int monto=0;
+    CajaAhorro CajaTemp;
+    ArchCaja = fopen(*(a+b),"rb+");
+    if(ArchCaja==NULL)
+    {
+             ArchCaja = fopen("wb+");
+             if(ArchCaja==NULL)
+             {
+                 printf("\N no se puede abrir archivo caja de ahorro");
+                 getch();
+                 return(9);
+             }
+
+    }
+    printf("\n Ingrese monto  a depositar: ")
+    scanf("%f,2");
+    fseek(ArchCaja,0,SEEK_SET);
+    fread(&CajaTemp.Cuenta,sizeof(CajaAhorro),1,ArchCaja);
+    while()
+
 }

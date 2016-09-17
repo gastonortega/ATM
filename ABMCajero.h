@@ -9,8 +9,7 @@
 #define PATH_TRANSFERENCIAS 4
 #define PATH_CAJADEAHORRO   5
 typedef struct{
-char NombreUsuario[10];
-int CuentaOrigen;
+int Cuenta;
 int  Alias;
 int  FechaTransf;
 int  Saldo;
@@ -26,9 +25,8 @@ int Activo;
 }Transferencias;
 
 int AltaUsuarioCliente(** char, int);
-int Consulta_Archivo_CajaAhorro(void);
-int Consulta_Archivo_Transferenci(void);
-
+int Deposito_Archivo_CajaAhorro(char **, int , int);
+int Ingreso_Archivo_Transferenci(char **, int, int);
 int AltaUsuarioCliente(char **, int);
 int Consulta_Archivo_CajaAhorro(char **, int);
 int Consulta_Archivo_Transferenci(char **, int);
