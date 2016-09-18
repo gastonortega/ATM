@@ -24,7 +24,7 @@ int Alias;
 int Activo;
 }Transferencias;
 
-int AltaUsuarioCliente(** char, int);
+int AltaUsuarioCliente(char **, int);
 int Deposito_Archivo_CajaAhorro(char **, int , int);
 int Ingreso_Archivo_Transferenci(char **, int, int);
 int AltaUsuarioCliente(char **, int);
