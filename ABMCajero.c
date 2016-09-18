@@ -107,7 +107,7 @@ int Deposito_Archivo_CajaAhorro(char ** a, int b, int cue)
     printf("\n Ingrese monto  a depositar: ");
     scanf("%.2f");
     fseek(ArchCaja,0,SEEK_SET);
-    fread(&CajaTemp.Cuenta,sizeof(CajaAhorro),1,ArchCaja);
+    fread(&CajaTemp.CuentaArch,sizeof(CajaAhorro),1,ArchCaja);
 
   //despues sacar
   return 0;

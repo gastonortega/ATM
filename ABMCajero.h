@@ -4,12 +4,10 @@
 #include <conio.h>
 #include <stdlib.h>
 #include "ABMUsuario.h"
-#include "ABMUsuario.h"
-#include "Logger.h"
 #define PATH_TRANSFERENCIAS 4
 #define PATH_CAJADEAHORRO   5
 typedef struct{
-int Cuenta;
+int CuentaArch;
 int  Alias;
 int  FechaTransf;
 int  Saldo;
@@ -24,7 +22,6 @@ int Alias;
 int Activo;
 }Transferencias;
 
-int AltaUsuarioCliente(char **, int);
 int Deposito_Archivo_CajaAhorro(char **, int , int);
 int Ingreso_Archivo_Transferenci(char **, int, int);
 int AltaUsuarioCliente(char **, int);
