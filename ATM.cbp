@@ -39,9 +39,6 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="ABMUsuario.h" />
-		<Unit filename="Logger.c">
-			<Option compilerVar="CC" />
-		</Unit>
 		<Unit filename="Logger.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
